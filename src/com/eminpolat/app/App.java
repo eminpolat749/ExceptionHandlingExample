@@ -4,6 +4,7 @@ import com.eminpolat.exception.IndeterminedException;
 import com.eminpolat.exception.UndefinedException;
 import com.eminpolat.util.MathUtil;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class App {
@@ -22,6 +23,9 @@ public class App {
         }
         catch (UndefinedException ignore) {
             System.out.println("Tanımsız...");
+        }
+        catch (InputMismatchException ignore) {
+            System.out.println("Hatalı değer girildi...");
         }
         finally {
             System.out.println("Program sonu...");
